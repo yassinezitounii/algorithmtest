@@ -1,0 +1,23 @@
+// Initialisation des compteurs
+longueur := 0 ;  //  pour la longueur de la phrase
+nombre_mots := 1 ;  //  pour le nombre de mots (initialisé à 1, car il y a toujours un mot)
+nombre_voyelles := 0 ;  // pour le nombre de voyelles
+voyelles := "aeiouAEIOU" ;  // Liste des voyelles
+
+// Parcours de chaque caractère de la phrase
+POUR chaque caractère dans phrase FAIRE
+    SI (caractère == " ") ALORS
+        nombre_mots := nombre_mots + 1 ;  
+    FIN_SI
+
+    SI (caractère dans voyelles) ALORS
+        nombre_voyelles := nombre_voyelles + 1 ; 
+    FIN_SI
+
+    longueur := longueur + 1 ;  
+FIN_POUR
+
+// Affichage des résultats
+Affiche "Longueur de la phrase : " + longueur
+Affiche "Nombre de mots : " + nombre_mots
+Affiche "Nombre de voyelles : " + nombre_voyelles
